@@ -28,7 +28,7 @@ The file `Data` is used to store related data. Symbolic codes are stored in the 
 
 - `myoperation`: Implement the operation $_Q\tilde{X}\coloneqq \mathrm{tr}_Q\tilde{X}\otimes \left( \mathbb{I} _Q/d_Q \right)$.
 - `mysylvester`: Solve the equation $\overline{\theta C}+\\{H,\bar{C}\\}=0$.
-- `myrandomChannel`: Randomly generate quantum channels $\mathcal{E}:\mathcal{L}(\mathcal{H})\rightarrow \mathcal{L}(\mathcal{H})$. Explicitly, we first generate a random unitary $U$ with $\mathrm{dim}(\mathcal{H})\times \mathrm{dim}(\mathcal{H})$ rows using [QETLAB](https://qetlab.com/RandomUnitary), uniformly according to Haar measure. Then we get Kraus operators from this unitary $U$ by Stinespring representation of $\mathcal{E}$.
+- `myrandomChannel`: Randomly generate quantum channels $\mathcal{E}:\mathcal{L}(\mathcal{H})\rightarrow \mathcal{L}(\mathcal{H})$. Explicitly, we first generate a random unitary $U$ using [QETLAB](https://qetlab.com/RandomUnitary), uniformly according to Haar measure. Then we get Kraus operators from this unitary $U$ by Stinespring representation of $\mathcal{E}$.
 - `plot_noisy`: Used to generate Fig. S2.
 - `plot_unexp`: Used to generate Fig. S3.
 
