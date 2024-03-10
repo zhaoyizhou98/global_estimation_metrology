@@ -9,4 +9,4 @@
 # Strict hierarchy
 - `maxsdp_noise_strategyii`, `maxsdp_noise_strategyiii`, `maxsdp_noise_strategyiv`, `minsdp_noise_strategyi`, `maxsdp_noise_strategyii` and `maxsdp_noise_strategyiii`: Data used to check the hierarchy between different types of strategies when $\mathcal{E} _{\theta}=\mathcal{E} ^{(\mathrm{AD)}}\circ \mathcal{E} ^{(\mathrm{BF)}}\circ \mathcal{U} _{\theta}$.
 - `maxsdp_unitary_strategyi_N2`, `maxsdp_unitary_strategyii_N2`, `maxsdp_unitary_strategyii_N3`, `minsdp_unitary_strategyi_N2`, `minsdp_unitary_strategyi_N3` and `maxsdp_unitary_strategyii_N2`: Data obtained by solving primal and dual SDPs of unitary channel $\mathcal{U}_\theta$.
-- `NoisePhiandH`, `UnitaryPhiandH_N2` and `UnitaryPhiandH_N3`: Data to get $\Phi$ and $H$ for noisy channel $\mathcal{E}_\theta=\mathcal{E}^{(\mathrm{AD})}\circ \mathcal{E}^{(\mathrm{BF})}\circ \mathcal{U}_\theta$ and unitary channel with $N=2,3$.
+- `NoisePhiandH`, `UnitaryPhiandH_N2` and `UnitaryPhiandH_N3`: Data to get $\Phi$ and $H$ for noisy channel $\mathcal{E} _{\theta}=\mathcal{E} ^{(\mathrm{AD)}}\circ \mathcal{E} ^{(\mathrm{BF)}}\circ \mathcal{U} _{\theta}$ and unitary channel with $N=2,3$.
