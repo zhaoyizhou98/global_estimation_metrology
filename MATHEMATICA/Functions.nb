@@ -1,0 +1,218 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      8585,        210]
+NotebookOptionsPosition[      8010,        193]
+NotebookOutlinePosition[      8445,        210]
+CellTagsIndexPosition[      8402,        207]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{
+    "MIT", " ", "License", "\n", "\[IndentingNewLine]", "Copyright", " ", 
+     RowBox[{"(", "c", ")"}], " ", "2020", " ", "Marco", " ", "T\[UAcute]lio",
+      " ", "Quintino", "\n", "\[IndentingNewLine]", "Permission", " ", "is", 
+     " ", "hereby", " ", "granted"}], ",", 
+    RowBox[{"free", " ", "of", " ", "charge"}], ",", 
+    RowBox[{
+    "to", " ", "any", " ", "person", " ", "obtaining", " ", "a", " ", "copy", 
+     "\n", "of", " ", "this", " ", "software", " ", "and", " ", "associated", 
+     " ", "documentation", " ", "files", " ", 
+     RowBox[{"(", 
+      RowBox[{"the", " ", "\"\<Software\>\""}], ")"}]}], ",", 
+    RowBox[{
+    "to", " ", "deal", "\n", "in", " ", "the", " ", "Software", " ", 
+     "without", " ", "restriction"}], ",", 
+    RowBox[{
+    "including", " ", "without", " ", "limitation", " ", "the", " ", "rights",
+      "\n", "to", " ", "use"}], ",", "copy", ",", "modify", ",", "merge", ",",
+     "publish", ",", "distribute", ",", "sublicense", ",", 
+    RowBox[{
+     RowBox[{"and", "/", "or"}], " ", "sell", "\n", "copies", " ", "of", " ", 
+     "the", " ", "Software"}], ",", 
+    RowBox[{
+    "and", " ", "to", " ", "permit", " ", "persons", " ", "to", " ", "whom", 
+     " ", "the", " ", "Software", " ", "is", "\n", "furnished", " ", "to", 
+     " ", "do", " ", "so"}], ",", 
+    RowBox[{"subject", " ", "to", " ", "the", " ", "following", " ", 
+     RowBox[{"conditions", ":", 
+      RowBox[{
+      "The", " ", "above", " ", "copyright", " ", "notice", " ", "and", " ", 
+       "this", " ", "permission", " ", "notice", " ", "shall", " ", "be", " ",
+        "included", " ", "in", " ", "all", "\n", "copies", " ", "or", " ", 
+       "substantial", " ", "portions", " ", "of", " ", "the", " ", 
+       RowBox[{"Software", ".", "THE"}], " ", "SOFTWARE", " ", "IS", " ", 
+       "PROVIDED", " ", "\"\<AS IS\>\""}]}]}], ",", 
+    RowBox[{"WITHOUT", " ", "WARRANTY", " ", "OF", " ", "ANY", " ", "KIND"}], 
+    ",", 
+    RowBox[{"EXPRESS", " ", "OR", "\n", "IMPLIED"}], ",", 
+    RowBox[{
+    "INCLUDING", " ", "BUT", " ", "NOT", " ", "LIMITED", " ", "TO", " ", 
+     "THE", " ", "WARRANTIES", " ", "OF", " ", "MERCHANTABILITY"}], ",", 
+    RowBox[{
+    "FITNESS", " ", "FOR", " ", "A", " ", "PARTICULAR", " ", "PURPOSE", " ", 
+     "AND", " ", 
+     RowBox[{"NONINFRINGEMENT", ".", "IN"}], " ", "NO", " ", "EVENT", " ", 
+     "SHALL", " ", "THE", "\n", "AUTHORS", " ", "OR", " ", "COPYRIGHT", " ", 
+     "HOLDERS", " ", "BE", " ", "LIABLE", " ", "FOR", " ", "ANY", " ", 
+     "CLAIM"}], ",", 
+    RowBox[{"DAMAGES", " ", "OR", " ", "OTHER", "\n", "LIABILITY"}], ",", 
+    RowBox[{
+    "WHETHER", " ", "IN", " ", "AN", " ", "ACTION", " ", "OF", " ", 
+     "CONTRACT"}], ",", 
+    RowBox[{"TORT", " ", "OR", " ", "OTHERWISE"}], ",", 
+    RowBox[{"ARISING", " ", "FROM"}], ",", 
+    RowBox[{
+    "OUT", " ", "OF", " ", "OR", " ", "IN", " ", "CONNECTION", " ", "WITH", 
+     " ", "THE", " ", "SOFTWARE", " ", "OR", " ", "THE", " ", "USE", " ", 
+     "OR", " ", "OTHER", " ", "DEALINGS", " ", "IN", " ", "THE", "\n", 
+     RowBox[{"SOFTWARE", "."}]}]}], "*)"}]}]], "Input",
+ CellChangeTimes->{{3.913580717717551*^9, 3.913580720663514*^9}, 
+   3.91871723677022*^9},ExpressionUUID->"e5c3a582-eea0-4393-a757-\
+07582484f314"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Clear", "[", "\"\<Global`*\>\"", "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.913580784207962*^9, 
+  3.913580786687512*^9}},ExpressionUUID->"5c6a4bac-9a33-465a-bdf9-\
+7519a589bf6a"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", " ", 
+   RowBox[{
+   "Function", " ", "that", " ", "implements", " ", "the", " ", "Trace", " ", 
+    "and", " ", "Replace", " ", "on", " ", "system", " ", "l"}], "*)"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"TR1", "[", 
+      RowBox[{"X_", ",", "l_", ",", "desc_"}], "]"}], ":=", 
+     RowBox[{"(", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"TotalSystems", "=", 
+        RowBox[{"Part", "[", 
+         RowBox[{
+          RowBox[{"Dimensions", "[", "desc", "]"}], ",", "1"}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"dChange", "=", 
+        RowBox[{"desc", "[", 
+         RowBox[{"[", "l", "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"keep", "=", 
+        RowBox[{"ConstantArray", "[", 
+         RowBox[{"1", ",", "TotalSystems"}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"keep", "[", 
+         RowBox[{"[", "l", "]"}], "]"}], "=", "0"}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"Xout", "=", 
+        RowBox[{
+         RowBox[{"PT", "[", 
+          RowBox[{"X", ",", "keep", ",", "desc"}], "]"}], "\[CircleTimes]", 
+         RowBox[{
+          RowBox[{"IdentityMatrix", "[", "dChange", "]"}], "/", 
+          "dChange"}]}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"newdesc", "=", "desc"}], ";", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"newdesc", "[", 
+         RowBox[{"[", "TotalSystems", "]"}], "]"}], "=", "dChange"}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"newdesc", "[", 
+         RowBox[{"[", "l", "]"}], "]"}], "=", 
+        RowBox[{"desc", "[", 
+         RowBox[{"[", "TotalSystems", "]"}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"newpos", "=", 
+        RowBox[{"Range", "[", "TotalSystems", "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"newpos", "=", 
+        RowBox[{"Append", "[", 
+         RowBox[{
+          RowBox[{"Drop", "[", 
+           RowBox[{"newpos", ",", 
+            RowBox[{"{", "l", "}"}]}], "]"}], ",", "l"}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"Xout", "=", 
+        RowBox[{"ExchangeSystems", "[", 
+         RowBox[{"Xout", ",", "newpos", ",", "newdesc"}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"Return", "[", "Xout", "]"}], ";"}], "\[IndentingNewLine]", 
+      ")"}]}], ";"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"(*", " ", 
+    RowBox[{
+    "Function", " ", "that", " ", "implements", " ", "the", " ", "Trace", " ",
+      "and", " ", "Replace", " ", "on", " ", "systems", " ", "positions"}], 
+    "*)"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"TR", "[", 
+      RowBox[{"X_", ",", "positions_", ",", "desc_"}], "]"}], ":=", 
+     RowBox[{"(", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"TotalPositions", ":=", 
+        RowBox[{"Part", "[", 
+         RowBox[{
+          RowBox[{"Dimensions", "[", "positions", "]"}], ",", "1"}], "]"}]}], 
+       ";", "\[IndentingNewLine]", 
+       RowBox[{"TRout", "=", "X"}], ";", "\[IndentingNewLine]", 
+       RowBox[{"For", "[", 
+        RowBox[{
+         RowBox[{"i", "=", "1"}], ",", 
+         RowBox[{"i", "<=", "TotalPositions"}], ",", 
+         RowBox[{"i", "++"}], ",", "\[IndentingNewLine]", 
+         RowBox[{"TRout", "=", 
+          RowBox[{"TR1", "[", 
+           RowBox[{"TRout", ",", 
+            RowBox[{"positions", "[", 
+             RowBox[{"[", "i", "]"}], "]"}], ",", "desc"}], "]"}]}]}], "]"}], 
+       ";", "\[IndentingNewLine]", 
+       RowBox[{"Return", "[", "TRout", "]"}], ";"}], "\[IndentingNewLine]", 
+      ")"}]}], ";"}]}]}]], "Input",
+ CellChangeTimes->{{3.913186113640129*^9, 3.9131861138580427`*^9}, 
+   3.9135806317075696`*^9},
+ CellLabel->
+  "In[242]:=",ExpressionUUID->"efb8beb9-dc46-4caa-85f5-c98485183b68"]
+},
+WindowSize->{1093.8, 604.8},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+Magnification:>1.1 Inherited,
+FrontEndVersion->"14.0 for Microsoft Windows (64-bit) (December 12, 2023)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"9f1430de-b2cd-4310-af7f-f53cbc7bd4df"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 3344, 65, 408, "Input",ExpressionUUID->"e5c3a582-eea0-4393-a757-07582484f314"],
+Cell[3905, 87, 217, 5, 31, "Input",ExpressionUUID->"5c6a4bac-9a33-465a-bdf9-7519a589bf6a"],
+Cell[4125, 94, 3881, 97, 513, "Input",ExpressionUUID->"efb8beb9-dc46-4caa-85f5-c98485183b68"]
+}
+]
+*)
+
