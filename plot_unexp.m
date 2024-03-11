@@ -14,12 +14,18 @@ plot(n,data.objlocal./data.objglobal,'-.',"Color",'r','LineWidth',1.1); hold on;
 % N = 3
 data = load('Data\GHZ_diffdelta_N3.mat');
 plot(n,data.objlocal./data.objglobal,"Color",'b','LineWidth',1.1); hold on;
-xlabel('$\Delta$','Interpreter','latex');
-ylabel('$\frac{\mathcal{J}(\rho)}{\mathcal{J}_{\mathrm{max}}^{(i)}}$','Interpreter','latex');
-legend({'N=2','N=3'});
+ax = gca;
+ax.XAxis.FontSize = 12;
+ax.YAxis.FontSize = 12;
+xlabel('$\Delta$','Interpreter','latex','FontSize',20);
+ylabel('$\frac{\mathcal{J}(\rho)}{\mathcal{J}_{\mathrm{max}}^{(i)}}$','Interpreter','latex','FontSize',20);
+lgd = legend({'N=2','N=3'});
 set(gca,'yminortick','on');
 set(gca,'xminortick','on');
 set(gca,'XLim',[0.1+step,2]);
+fontsize(lgd,12,'points');
+
+
 saveas(gcf,'Plot.svg');
 
 % This figure is similar to the one above
