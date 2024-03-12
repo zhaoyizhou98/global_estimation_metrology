@@ -1,12 +1,12 @@
 # Strict hierarchy of optimal strategies for global estimations: Mapping global estimations into local ones
 
-This repository serves as a companion to the research paper with the same name.
+This repository serves as a companion to the research paper [Zhao-Yi Zhou, Jing-Tao Qiu, and Da-Jian Zhang, "*Strict hierarchy of optimal strategies for global estimations: Mapping global estimations into local ones*"](https://arxiv.org/abs/2403.06585).
 
-# Structure of this repository
+## Structure of this repository
 
 The file `Data` is used to store related data. Symbolic codes are stored in the file `MATHEMATICA` which are used to provide a computer-assisted level proof for a strict hierarchy between different types of strategies. The current file stores MATLAB codes.
 
-# Basic requirement 
+## Basic requirement 
 
 - The `CVX` package should be installed. See [this website](http://cvxr.com/cvx/doc/install.html) for guidance.
 
@@ -14,8 +14,8 @@ The file `Data` is used to store related data. Symbolic codes are stored in the 
 
 - The symbolic calculation using MATHEMATICA requires [`MATLink`](http://matlink.org/) to invoke MATLAB functions without leaving MATHEMATICA. One can also avoid using MATLink by directly using the data we generated in `Data`.
 
-# List of functions
-## Basic operations 
+## List of functions
+### Basic operations 
 
 - `Max_SDP`: Primal SDP.
 - `Min_SDP`: Dual SDP.
@@ -24,7 +24,7 @@ The file `Data` is used to store related data. Symbolic codes are stored in the 
 - `SeqNoCtrol`: Calculate the performance of sequential strategies without control.
 - `Noise_diff_dist`: Study the impact of different prior distributions for noisy channels.
 
-## Helper functions
+### Helper functions
 
 - `myoperation`: Implement the operation $_Q\tilde{X}\coloneqq \mathrm{tr}_Q\tilde{X}\otimes \left( \mathbb{I} _Q/d_Q \right)$.
 - `mysylvester`: Solve the equation $\overline{\theta C}+\\{H,\bar{C}\\}=0$.
