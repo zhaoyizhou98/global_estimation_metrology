@@ -1,6 +1,6 @@
-# Strict hierarchy of optimal strategies for global estimations: Mapping global estimations into local ones
+# Strict hierarchy of optimal strategies for global estimations: Linking global estimations with local ones
 
-This repository serves as a companion to the research paper [Zhao-Yi Zhou, Jing-Tao Qiu, and Da-Jian Zhang, "*Strict hierarchy of optimal strategies for global estimations: Mapping global estimations into local ones*"](https://arxiv.org/abs/2403.06585).
+This repository serves as a companion to the research paper [Zhao-Yi Zhou, Jing-Tao Qiu, and Da-Jian Zhang, "*Strict hierarchy of optimal strategies for global estimations: Linking global estimations with local ones*"](https://journals.aps.org/prresearch/abstract/10.1103/PhysRevResearch.6.L032048).
 
 ## Structure of this repository
 
